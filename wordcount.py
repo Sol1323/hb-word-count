@@ -1,12 +1,9 @@
 # put your code here.
-file = open("test.txt", "r")
-# print(file.read())
-
 
 def word_count(file):
+    file = open(file, "r")
 
     word_count = {}
-
 
     for line in file: 
         line_strip = line.rstrip()
@@ -24,4 +21,6 @@ def word_count(file):
     for word, count in word_count.items():
         print(f"{word} {count}")
 
-word_count(file)
+    file.close()
+
+word_count("test.txt")
